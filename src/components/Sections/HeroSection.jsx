@@ -43,7 +43,7 @@ const HeroSection = () => {
 			}`}
 		>
 			{/*Hero Section*/}
-			<motion.section id="Home" style={{ y: heroY }} className="" />
+			<motion.section id="home" style={{ y: heroY }} className="" />
 
 			{/* Main content container */}
 			<div className="min-h-screen flex items-center justify-center relative px-6 pt-10">
