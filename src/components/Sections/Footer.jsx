@@ -138,28 +138,34 @@ const Footer = () => {
 						</motion.div>
 
 						{/* Social Links */}
-						<motion.div variants={itemVariants}>
-							<h3 className="text-xl font-medium mb-6">Follow Me</h3>
-							<div className="grid grid-cols-2 gap-4">
-								{socialLinks.map((social) => (
-									<motion.a
-										key={social.name}
-										href={social.url}
-										target="_blank"
-										rel="noopener noreferrer"
-										whileHover={{ scale: 1.05, y: -2 }}
-										whileTap={{ scale: 0.95 }}
-										className={`flex items-center space-x-3 p-4 rounded-xl border transition-all duration-300 ${
-											isDarkMode
-												? "bg-gray-800/50 border-gray-700 hover:border-gray-600"
-												: "bg-white/80 border-gray-200 hover:border-gray-300"
-										} ${social.bgColor} ${social.color}`}
-									>
-										<social.icon size={20} />
-										<span className="font-medium">{social.name}</span>
-									</motion.a>
-								))}
-							</div>
+						<motion.div
+							variants={itemVariants}
+							className="flex justify-center space-x-6"
+						>
+							{socialLinks.map((social, index) => (
+								<motion.a
+									key={social.name}
+									href={social.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={`p-3 rounded-full transition-all duration-300 ${
+										isDarkMode
+											? "bg-gray-800/50 hover:bg-gray-700/50"
+											: " bg-gray-100/50 hover:bg-gray-200/50"
+									} ${social.bgColor} backdrop-blur-sm`}
+									whileHover={{ scale: 1.1, y: -2, rotate: [0, -5, 5, 0] }}
+									whileTap={{ scale: 0.95 }}
+									initial={{ opacity: 0, y: 20 }}
+									animate={isInView ? { opacity: 1, y: 0 } : {}}
+									transition={{
+										delay: index * 0.1 + 0.5,
+										type: "spring",
+										stiffness: 300,
+									}}
+								>
+									<social.icon size={20} />
+								</motion.a>
+							))}
 						</motion.div>
 
 						{/* Divider */}
@@ -181,7 +187,7 @@ const Footer = () => {
 							</motion.dv>
 							<div
 								className={`h-px w-16 ${
-									isDarkMode ? "bg-gray-700" : "br-gray-300"
+									isDarkMode ? "bg-gray-700" : "bg-gray-300"
 								}`}
 							/>
 						</motion.div>
