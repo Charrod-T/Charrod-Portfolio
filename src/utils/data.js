@@ -181,7 +181,7 @@ export const JOURNEY_STEPS = [
 		title: "Building Tech Skills from the Ground up",
 		company: "Self-Taught",
 		description:
-			"Begin self-taught journey into software, hardware, coding, apps and web-development building skills step by step.",
+			"Began self-taught journey into software, hardware, coding, apps and web-development building skills step by step.",
 		icon: Terminal,
 		color: "bg-blue-500",
 	},
@@ -251,6 +251,6 @@ export const CONTACT_INFO = [
 	{
 		icon: Phone,
 		label: "Phone",
-		value: "+1 (832) 770-0445",
+		value: "+1 (832) 77xx-xxxx",
 	},
 ];
