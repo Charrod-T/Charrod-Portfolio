@@ -206,19 +206,8 @@ const ContactSection = () => {
 							} mb-6`}
 						>
 							Sometimes a conversation is worth a thousand messages, Feel free
-							to schedule a call to discuss you project.
+							to schedule a call to discuss you project via Email.
 						</p>
-						<motion.button
-							whileHover={{ y: -2, scale: 1.05 }}
-							whileTap={{ scale: 0.98 }}
-							className={`px-6 py-3 rounded-full border font-medium transition-all duration-300 ${
-								isDarkMode
-									? "border-gray-600 hover:border-blue-500 hover:text-blue-400"
-									: "border-gray-300 hover:border-blue-500 hover:text-blue-600"
-							}`}
-						>
-							Schedule a Call
-						</motion.button>
 					</motion.div>
 				</motion.div>
 			</div>
