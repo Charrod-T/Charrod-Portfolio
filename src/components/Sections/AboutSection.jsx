@@ -117,8 +117,8 @@ const AboutSection = () => {
 							}`}
 						>
 							I believe technology should be a bridge that connects people and
-							solve real-world problems. My passsion lies in crafting digital
-							expertise that are not just functional, but delightful and
+							solves real-world problems. My passion lies in crafting digital
+							expertise that is not just functional, but delightful and
 							accessible to everyone.
 						</p>
 						<p
@@ -127,7 +127,7 @@ const AboutSection = () => {
 							}`}
 						>
 							When I'm not coding, you'll find me exploring new frameworks,
-							contributing to open sources, think of new projects to create,
+							contributing to open source, thinking of new projects to create,
 							admiring all application designs and gaming. I love the constant
 							evolution of web technologies and the endless possibilites it
 							brings to create meaningful digital experiences.
