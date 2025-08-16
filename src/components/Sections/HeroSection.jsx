@@ -189,9 +189,12 @@ const HeroSection = () => {
 								className="flex justify-center space-x-6 mb-8"
 							>
 								{[
-									{ icon: FiGithub, href: "#" },
-									{ icon: FiLinkedin, href: "#" },
-									{ icon: Mail, href: "#" },
+									{ icon: FiGithub, href: "https://github.com/Charrod-T" },
+									{
+										icon: FiLinkedin,
+										href: "https://www.linkedin.com/in/charrod-terrell-23115737a/",
+									},
+									{ icon: Mail, href: "Mailto:charrodterrell@yahoo.com" },
 								].map((social, index) => (
 									<motion.a
 										key={index}

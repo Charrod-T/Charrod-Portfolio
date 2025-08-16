@@ -117,20 +117,20 @@ const AboutSection = () => {
 							}`}
 						>
 							I believe technology should be a bridge that connects people and
-							solve real-world problems. my passsion lies in crafting digital
+							solve real-world problems. My passsion lies in crafting digital
 							expertise that are not just functional, but delightful and
-							accessible to everyone
+							accessible to everyone.
 						</p>
 						<p
 							className={`text-base leading-relaxed ${
 								isDarkMode ? "text-gray-400" : "text-gray-600"
 							}`}
 						>
-							when I'm not coding, you'll find me exploring new frameworks,
-							contributing to open source, thinking of new projects to create,
+							When I'm not coding, you'll find me exploring new frameworks,
+							contributing to open sources, think of new projects to create,
 							admiring all application designs and gaming. I love the constant
-							evolution of web technologies and the endless pissibilites the
-							bring to create meaningful digital experiences.
+							evolution of web technologies and the endless possibilites it
+							brings to create meaningful digital experiences.
 						</p>
 					</motion.div>
 
@@ -182,12 +182,7 @@ const AboutSection = () => {
 						</div>
 						{/* DigitalSignature */}
 						<div className="flex justify-center">
-							<img
-								src={SIGNATURE}
-								alt="Charrod"
-								className="w-28"
-								
-							/>
+							<img src={SIGNATURE} alt="Charrod" className="w-28" />
 						</div>
 						<div className="text-lg font-medium text-blue-500 mt-2">
 							Charrod Terrell

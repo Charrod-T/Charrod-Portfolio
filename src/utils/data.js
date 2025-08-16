@@ -178,10 +178,10 @@ export const PROJECTS = [
 export const JOURNEY_STEPS = [
 	{
 		year: "2010",
-		title: "Building Tech Skills fron the Ground up",
+		title: "Building Tech Skills from the Ground up",
 		company: "Self-Taught",
 		description:
-			"Begin self-taught journey into software, hardware, coding, apps and web-development building skills step by step",
+			"Begin self-taught journey into software, hardware, coding, apps and web-development building skills step by step.",
 		icon: Terminal,
 		color: "bg-blue-500",
 	},
@@ -190,7 +190,7 @@ export const JOURNEY_STEPS = [
 		title: "Software Engineering Certification",
 		company: "Ed2Go/Quickstart",
 		description:
-			"Enrolled in an intensive 6-month Software Engineering boot camp, earning my certification of completion in 3 months. Gaining hands-on experience in coding, application development, and web technologies, while building real-world projects that prepare me for a career as a software engineer",
+			"Enrolled in an intensive 6-month Software Engineering boot camp, earning my certification of completion in 3 months. Gaining hands-on experience in coding, application development, and web technologies, while building real-world projects that prepare me for a career as a software engineer.",
 		icon: GraduationCap,
 		color: "bg-purple-500",
 	},
