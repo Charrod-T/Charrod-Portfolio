@@ -306,7 +306,7 @@ const HeroSection = () => {
 								<motion.button
 									whileHover={{ y: -2 }}
 									whileTap={{ scale: 0.98 }}
-									onClick={() => scrollToSection("Work")}
+									onClick={() => scrollToSection("work")}
 									className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
 								>
 									View Work
@@ -315,7 +315,7 @@ const HeroSection = () => {
 								<motion.button
 									whileHover={{ y: -2 }}
 									whileTap={{ scale: 0.98 }}
-									onClick={() => scrollToSection("Contact")}
+									onClick={() => scrollToSection("contact")}
 									className={`border ${
 										isDarkMode
 											? "border-gray-700 hover:border-gray-600 text-gray-300"
