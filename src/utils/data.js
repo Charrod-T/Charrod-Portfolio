@@ -217,7 +217,7 @@ export const SOCIAL_LINKS = [
 	{
 		name: "GitHub",
 		icon: FiGithub,
-		url: "https://github.com/Charrod-T",
+		url: "https://github.com/Charrod-T/",
 		color: "hover:text-gray-400",
 		bgColor: "hover:bg-gray-800",
 	},
