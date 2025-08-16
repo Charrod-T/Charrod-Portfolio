@@ -46,12 +46,7 @@ const Navbar = () => {
 							key={item}
 							whileHover={{ y: -2 }}
 							onClick={() => {
-								if (item === "Home") {
-									window.scrollTo({ top: 0, behavior: "smooth" });
-									setIsMenuOpen(false);
-								} else {
-									scrollToSection(item.toLowerCase());
-								}
+								scrollToSection(item.toLowerCase());
 							}}
 							className={`text-sm uppercase tracking-wider transition-colors${
 								isDarkMode

@@ -178,13 +178,13 @@ const Footer = () => {
 									isDarkMode ? "bg-gray-700" : "bg-gray-300"
 								}`}
 							/>
-							<motion.dv
+							<motion.div
 								animite={{ scale: [1, 1.2, 1] }}
 								transition={{ duration: 2, repeat: Infinity }}
 								className="text-red-500"
 							>
 								<Heart size={16} fill="currentColor" />
-							</motion.dv>
+							</motion.div>
 							<div
 								className={`h-px w-16 ${
 									isDarkMode ? "bg-gray-700" : "bg-gray-300"

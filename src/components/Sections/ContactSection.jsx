@@ -32,7 +32,7 @@ const ContactSection = () => {
 
 	return (
 		<section
-			id="Contact"
+			id="contact"
 			ref={sectionRef}
 			className={`py-24 px-6 ${
 				isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
