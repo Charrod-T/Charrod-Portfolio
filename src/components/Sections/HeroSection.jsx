@@ -43,11 +43,11 @@ const HeroSection = () => {
 			}`}
 		>
 			{/*Hero Section*/}
-			<motion.section id="home" style={{ y: heroY }} className="" />
-
-			{/* Main content container */}
-			<div className="min-h-screen flex items-center justify-center relative px-6 pt-10">
-				{/* Decorative background elements */}
+			<motion.section
+				id="home"
+				style={{ y: heroY }}
+				className="min-h-screen flex items-center justify-center relative px-6 pt-10"
+			>
 				<div className="absolute inset-0 overflow-hidden">
 					<motion.div
 						animate={{
@@ -214,7 +214,7 @@ const HeroSection = () => {
 							{/*Tech Stack - Mobile*/}
 							<motion.div
 								variants={itemVariants}
-								className="flex justify-center items-center space-x-6 text-xs uppercase tracking-wide flex-wrap"
+								className="flex justify-center items-center space-x-6 text-xs uppercase tracking-widest flex-wrap"
 							>
 								<span
 									className={isDarkMode ? "text-gray-600" : "text-gray-500"}
@@ -254,9 +254,7 @@ const HeroSection = () => {
 							</motion.div>
 						</motion.div>
 					</div>
-
 					{/*Desktop Layout- Split*/}
-					{/* Combined the two grid divs into one and put content inside */}
 					<div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
 						{/*Left Column - Content*/}
 						<motion.div
@@ -355,96 +353,87 @@ const HeroSection = () => {
 							</motion.div>
 						</motion.div>
 
-						{/*Right Column - Profile Image and Tech Stack */}
+						{/*Right Column Profile Image*/}
 						<motion.div
 							initial="hidden"
 							animate="visible"
-							variants={containerVariants}
-							className="flex flex-col items-center lg:items-end"
+							variants={imageVariants}
+							className="flex justify-center lg:justify-end"
 						>
-							{/*Tech Stack - Desktop*/}
-							<motion.div
-								variants={itemVariants}
-								className="flex items-center space-x-8 text-xs uppercase tracking-widest flex-wrap mb-8 lg:mb-7.5"
-							>
-								<span
-									className={isDarkMode ? "text-gray-600" : "text-gray-500"}
+							<div className="relative">
+								{/*Tech Stack - Desktop*/}
+								<motion.div
+									variants={itemVariants}
+									className="flex items-center space-x-8 text-xs uppercase tracking-widest absolute -top-16 -left-28"
 								>
-									React
-								</span>
-								<span
-									className={isDarkMode ? "text-gray-700" : "text-gray-400"}
-								>
-									.
-								</span>
-								<span
-									className={isDarkMode ? "text-gray-600" : "text-gray-500"}
-								>
-									Node.js
-								</span>
-								<span
-									className={isDarkMode ? "text-gray-700" : "text-gray-400"}
-								>
-									.
-								</span>
-								<span
-									className={isDarkMode ? "text-gray-600" : "text-gray-500"}
-								>
-									TypeScript
-								</span>
-								<span
-									className={isDarkMode ? "text-gray-700" : "text-gray-400"}
-								>
-									.
-								</span>
-								<span
-									className={isDarkMode ? "text-gray-600" : "text-gray-500"}
-								>
-									MongoDB
-								</span>
-							</motion.div>
-
-							{/*Profile Image - Desktop*/}
-							<motion.div
-								variants={imageVariants}
-								className="flex justify-center lg:justify-end"
-							>
-								<div className="relative">
-									{" "}
-									{/* Removed w-96 h-96 from here as it's on the motion.div */}
-									<motion.div
-										whileHover={{ scale: 1.02 }}
-										className={`w-96 h-96 rounded-3xl overflow-hidden border-4 ${
-											isDarkMode ? "border-gray-800" : "border-gray-300"
-										} shadow-2xl`}
+									<span
+										className={isDarkMode ? "text-gray-600" : "text-gray-500"}
 									>
-										<img
-											src={PROFILE_PIC}
-											alt="Profile"
-											className="w-full h-full object-cover"
-										/>
-									</motion.div>
-									{/*Decorative elements - Desktop */}
-									<motion.div
-										animate={{ rotate: 360 }}
-										transition={{
-											duration: 20,
-											repeat: Infinity,
-											ease: "linear",
-										}}
-										className="absolute -inset-4 rounded-3xl border border-blue-500/20"
+										React
+									</span>
+									<span
+										className={isDarkMode ? "text-gray-700" : "text-gray-400"}
+									>
+										.
+									</span>
+									<span
+										className={isDarkMode ? "text-gray-600" : "text-gray-500"}
+									>
+										Node.js
+									</span>
+									<span
+										className={isDarkMode ? "text-gray-700" : "text-gray-400"}
+									>
+										.
+									</span>
+									<span
+										className={isDarkMode ? "text-gray-600" : "text-gray-500"}
+									>
+										TypeScript
+									</span>
+									<span
+										className={isDarkMode ? "text-gray-700" : "text-gray-400"}
+									>
+										.
+									</span>
+									<span
+										className={isDarkMode ? "text-gray-600" : "text-gray-500"}
+									>
+										MongoDB
+									</span>
+								</motion.div>
+								<motion.div
+									whileHover={{ scale: 1.02 }}
+									className={`w-80 h-96 rounded-3xl overflow-hidden border-4 ${
+										isDarkMode ? "border-gray-800" : "border-gray-300"
+									} shadow-2xl`}
+								>
+									<img
+										src={PROFILE_PIC}
+										alt="Profile"
+										className="w-full h-full object-cover"
 									/>
-									<motion.div
-										animate={{ rotate: -360 }}
-										transition={{
-											duration: 30,
-											repeat: Infinity,
-											ease: "linear",
-										}}
-										className="absolute -inset-8 rounded-3xl border border-purple-500/10"
-									/>
-								</div>
-							</motion.div>
+								</motion.div>
+								{/*Decorative elements*/}
+								<motion.div
+									animate={{ rotate: 360 }}
+									transition={{
+										duration: 20,
+										repeat: Infinity,
+										ease: "linear",
+									}}
+									className="absolute -inset-4 rounded-3xl border border-blue-500/20"
+								/>
+								<motion.div
+									animate={{ rotate: -360 }}
+									transition={{
+										duration: 30,
+										repeat: Infinity,
+										ease: "linear",
+									}}
+									className="absolute -inset-8 rounded-3xl border border-purple-500/10"
+								/>
+							</div>
 						</motion.div>
 					</div>
 				</div>
@@ -460,7 +449,7 @@ const HeroSection = () => {
 						className={isDarkMode ? "text-gray-600" : "text-gray-400"}
 					/>
 				</motion.div>
-			</div>
+			</motion.section>
 		</div>
 	);
 };

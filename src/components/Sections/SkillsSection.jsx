@@ -30,8 +30,7 @@ const SkillsSection = () => {
 		}),
 	};
 
-	return (
-		<section
+	return <section
 			ref={sectionRef}
 			id="skills"
 			className={`py-24 px-6 ${
@@ -53,6 +52,7 @@ const SkillsSection = () => {
 			</motion.div>
 
 			<div className="max-w-6xl mx-auto relative z-10">
+
 				{/*Section Header*/}
 				<motion.div
 					initial="hidden"
@@ -112,7 +112,9 @@ const SkillsSection = () => {
 										isDarkMode ? "gb-gray-800" : "bg-gray-100"
 									} mr-4`}
 								>
-									<category.icon size={24} className="text-blue-500" />
+									<category.icon size={24} className="text-blue-500"/>
+										</div>
+								<div>
 									<h3 className="text-xl font-medium mb-1">{category.title}</h3>
 									<p
 										className={`text-sm ${
@@ -212,9 +214,9 @@ const SkillsSection = () => {
 						</motion.div>
 					))}
 				</motion.div>
+				
 			</div>
 		</section>
-	);
 };
 
 export default SkillsSection;

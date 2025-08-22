@@ -5,7 +5,7 @@ import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
 	const { isDarkMode, toggleDarkMode } = useTheme();
-	const { isMenuOpen, setIsMenuOpen } = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const scrollToSection = (sectionId) => {
 		const element = document.getElementById(sectionId);
@@ -30,13 +30,7 @@ const Navbar = () => {
 					className="flex items-center space-x-2"
 				>
 					<Terminal size={24} className="text-blue-500" />{" "}
-					<span
-						className={`text-lg ml-1 ${
-							isDarkMode ? "hover:text-gray-200" : "hover:text-gray-900"
-						}`}
-					>
-						Charrod Terrell
-					</span>
+					<span className="text-lg ml-1">Charrod Terrell</span>
 				</motion.div>
 
 				{/*Desktop Navigation*/}
@@ -45,10 +39,8 @@ const Navbar = () => {
 						<motion.button
 							key={item}
 							whileHover={{ y: -2 }}
-							onClick={() => {
-								scrollToSection(item.toLowerCase());
-							}}
-							className={`text-sm uppercase tracking-wider transition-colors${
+							onClick={() => scrollToSection(item.toLowerCase())}
+							className={`text-sm uppercase tracking-wider transition-colors ${
 								isDarkMode
 									? "text-gray-400 hover:text-white"
 									: "text-gray-600 hover:text-gray-900"
@@ -63,13 +55,14 @@ const Navbar = () => {
 						onClick={() => toggleDarkMode(isDarkMode ? "light" : "dark")}
 						className={`p-2 rounded-full transition-colors ${
 							isDarkMode
-								? "text-gray-400 hover:text-white hover: bg-gray-800"
-								: "text-gray-600 hover:text-white hover: bg-gray-200"
+								? "text-gray-400 hover:text-white hover:bg-gray-800"
+								: "text-gray-600 hover:text-gray-900 hover:bg-gray-200"
 						}`}
 					>
 						{isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
 					</motion.button>
 				</div>
+
 				{/*Mobile Menu Button*/}
 				<div className="md:hidden flex items-center space-x-4">
 					<motion.button

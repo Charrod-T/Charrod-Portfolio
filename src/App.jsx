@@ -7,6 +7,7 @@ import ProjectsSection from "./components/Sections/ProjectsSection";
 import AboutSection from "./components/Sections/AboutSection";
 import ContactSection from "./components/Sections/ContactSection";
 import Footer from "./components/Sections/Footer";
+
 const App = () => {
 	return (
 		<ThemeProvider>
