@@ -16,7 +16,7 @@ const ContactSection = () => {
 	});
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
-
+	const [result, setResult] = useState("");
 	const sectionRef = useRef(null);
 	const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -36,62 +36,47 @@ const ContactSection = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setIsSubmitting(true);
-// Replace "YOUR_API_ENDPOINT" with your actual form submission API endpoint.
-        // Replace "YOUR_PUBLIC_API_KEY" with your actual public API key.
-        // The method for including the API key depends on the specific API you are using.
-        // This example includes the API key in the request body.
-        //try {
-            //const response = await fetch("YOUR_API_ENDPOINT", {
-                //method: "POST", // Or the appropriate HTTP method for your API
-               //headers: {
-                    //"Content-Type": "application/json",
-                    // If the API key is needed in headers (less common for public keys directly from client)
-                    // "X-API-Key": "YOUR_PUBLIC_API_KEY"
-                //},
-                //body: JSON.stringify({
-                    //...formData,
-                    //apiKey: "YOUR_PUBLIC_API_KEY", // Include API key in the //body
-                //}),
-            //});
+		const formDataToSend = new FormData();
+		formDataToSend.append("name", formData.name);
+		formDataToSend.append("email", formData.email);
+		formDataToSend.append("message", formData.message);
+		formDataToSend.append("access_key", "a23c3de3-6f54-4a61-be14-f095931bb3d3");
+		try {
+			const response = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				body: formDataToSend,
+			});
+			const data = await response.json();
 
-            //if (response.ok) {
-                // Handle successful submission
-                //setShowSuccess(true);
-                //setFormData({ name: "", email: "", message: "" });
-                // Hide success message after 3 seconds
-                //setTimeout(() => setShowSuccess(false), 3000); // Corrected hide logic
-            //} else {
-                // Handle API errors
-                //console.error("Form submission failed:", response.statusText);
-                // Optionally, show an error message to the user
-            //}
-        //} catch (error) {
-            //console.error("Error during form submission:", error);
-            // Optionally, show an error message to the user
-        //} finally {
-            //setIsSubmitting(false);
-        //}
-    //};
-		// Simulate form submission
-		await new Promise((resolve) => setTimeout(resolve, 1000));
-		setIsSubmitting(false);
-		setShowSuccess(true);
-		setFormData({ name: "", email: "", message: "" });
-
-		// Hide success message after 3 seconds
-		setTimeout(() => setShowSuccess(true), 1000);
+			if (data.success) {
+				setResult("Form Submitted Successfully");
+				setFormData({ name: "", email: "", message: "" });
+				setShowSuccess(true);
+				setTimeout(() => setResult(""), 2000);
+			} else {
+				console.log("Form submission failed", data);
+				setResult(data.message || "An error occurred during submission.");
+			}
+			setTimeout(() => setResult(false), 3000);
+		} catch (error) {
+			console.error("Error during form submission:", error);
+			setResult("An error occurred. Please try again.");
+			setTimeout(() => setResult(""), 5000);
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
 		<section
-			id="contact"
+			id='contact'
 			ref={sectionRef}
 			className={`py-24 px-6 ${
 				isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
 			} relative overflow-hidden`}
 		>
 			{/* Background Elements */}
-			<motion.div style={{ y }} className="absolute inset-0 overflow-hidden">
+			<motion.div style={{ y }} className='absolute inset-0 overflow-hidden'>
 				<div
 					className={`absolute top-20 left-1/4 w-72 h-72 rounded-full blur-3xl opacity-5 ${
 						isDarkMode ? "bg-blue-500" : "bg-blue-400"
@@ -104,13 +89,13 @@ const ContactSection = () => {
 				/>
 			</motion.div>
 
-			<div className="max-w-6xl mx-auto relative z-10">
+			<div className='max-w-6xl mx-auto relative z-10'>
 				{/* Section Header */}
 				<motion.div
-					initial="hidden"
+					initial='hidden'
 					animate={isInView ? "visible" : "hidden"}
 					variants={containerVariants}
-					className="text-center mb-20"
+					className='text-center mb-20'
 				>
 					<motion.div
 						variants={itemVariants}
@@ -123,10 +108,10 @@ const ContactSection = () => {
 
 					<motion.h2
 						variants={itemVariants}
-						className="text-3xl md:text-5xl font-light m-6"
+						className='text-3xl md:text-5xl font-light m-6'
 					>
 						Get In
-						<span className="text-blue-500 font-medium">Touch</span>
+						<span className='text-blue-500 font-medium'>Touch</span>
 					</motion.h2>
 
 					<motion.p
@@ -140,10 +125,10 @@ const ContactSection = () => {
 					</motion.p>
 				</motion.div>
 
-				<div className="grid lg:grid-cols-2 gap-16 items-start">
+				<div className='grid lg:grid-cols-2 gap-16 items-start'>
 					{/* Contact Form */}
 					<motion.div
-						initial="hidden"
+						initial='hidden'
 						animate={isInView ? "visible" : "hidden"}
 						variants={containerVariants}
 					>
@@ -155,22 +140,22 @@ const ContactSection = () => {
 									: "bg-gray-50/80 border-gray-200 backdrop-blur-sm"
 							}`}
 						>
-							<h3 className="text-2xl font-medium mb-8">Send me a message</h3>
+							<h3 className='text-2xl font-medium mb-8'>Send me a message</h3>
 
-							<div className="space-y-6">
-								<div classname="grid md:grid-cols-2 gap-6">
+							<div className='space-y-6'>
+								<div className='grid md:grid-cols-2 gap-6'>
 									<TextInput
 										isDarkMode={isDarkMode}
 										value={formData.name}
 										handleInputChange={(text) =>
 											handleInputChange("name", text)
 										}
-										label="Your Name"
+										label='Your Name'
 									/>
 
 									<TextInput
 										isDarkMode={isDarkMode}
-										label="Email Address"
+										label='Email Address'
 										value={formData.email}
 										handleInputChange={(text) =>
 											handleInputChange("email", text)
@@ -180,7 +165,7 @@ const ContactSection = () => {
 
 								<TextInput
 									isDarkMode={isDarkMode}
-									label="Your Message"
+									label='Your Message'
 									value={formData.message}
 									textarea
 									handleInputChange={(text) =>
@@ -192,7 +177,7 @@ const ContactSection = () => {
 									disabled={isSubmitting}
 									whileHover={{ y: -2, scale: 1.02 }}
 									whileTap={{ scale: 0.98 }}
-									className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white py-4 rounded-xl text-sm uppercase tracking-wider font-medium transition-all duration-300 flex items-center justify-center space-x-2"
+									className='w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white py-4 rounded-xl text-sm uppercase tracking-wider font-medium transition-all duration-300 flex items-center justify-center space-x-2'
 									onClick={handleSubmit}
 								>
 									{isSubmitting ? (
@@ -204,7 +189,7 @@ const ContactSection = () => {
 													duration: 1,
 													ease: "linear",
 												}}
-												className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"
+												className='w-4 h-4 border-2 border-white border-t-transparent rounded-full'
 											/>
 											<span>Sending...</span>
 										</>
@@ -219,18 +204,18 @@ const ContactSection = () => {
 						</motion.div>
 					</motion.div>
 				</div>
-				<div className="grid lg:grid-cols-2 gap-16 items-center">
+				<div className='grid lg:grid-cols-2 gap-16 items-center'>
 					{/* Contact Info & Social Links*/}
 					<motion.div
-						initial="hidden"
+						initial='hidden'
 						animate={isInView ? "visible" : "hidden"}
 						variants={containerVariants}
-						className="space-y-8"
+						className='space-y-8'
 					>
 						{/*Contact Information*/}
 						<motion.div variants={itemVariants}>
-							<h3 className="text-2xl font-medium m-6">Contact Information</h3>
-							<div className="space-y-4">
+							<h3 className='text-2xl font-medium m-6'>Contact Information</h3>
+							<div className='space-y-4'>
 								{CONTACT_INFO.map((info, index) => (
 									<motion.div
 										key={info.label}
@@ -247,7 +232,7 @@ const ContactSection = () => {
 												isDarkMode ? "bg-gray-700" : "bg-white"
 											}`}
 										>
-											<info.icon size={20} className="text-blue-500" />
+											<info.icon size={20} className='text-blue-500' />
 										</div>
 										<div>
 											<div
@@ -257,7 +242,7 @@ const ContactSection = () => {
 											>
 												{info.label}
 											</div>
-											<div className="font-medium">{info.value}</div>
+											<div className='font-medium'>{info.value}</div>
 										</div>
 									</motion.div>
 								))}
@@ -266,14 +251,14 @@ const ContactSection = () => {
 
 						{/* Social Links */}
 						<motion.div variants={itemVariants}>
-							<h3 className="text-xl font-medium mb-6">Follow Me</h3>
-							<div className="grid grid-cols-2 gap-4">
+							<h3 className='text-xl font-medium mb-6'>Follow Me</h3>
+							<div className='grid grid-cols-2 gap-4'>
 								{SOCIAL_LINKS.map((social) => (
 									<motion.a
 										key={social.name}
 										href={social.url}
-										target="_blank"
-										rel="noopener noreferrer"
+										target='_blank'
+										rel='noopener noreferrer'
 										whileHover={{ scale: 1.05, y: -2 }}
 										whileTap={{ scale: 0.95 }}
 										className={`flex items-center space-x-3 p-4 rounded-xl border transition-all duration-300 ${
@@ -283,7 +268,7 @@ const ContactSection = () => {
 										} ${social.bgColor} ${social.color}`}
 									>
 										<social.icon size={20} />
-										<span className="font-medium">{social.name}</span>
+										<span className='font-medium'>{social.name}</span>
 									</motion.a>
 								))}
 							</div>
@@ -298,9 +283,9 @@ const ContactSection = () => {
 								: "bg-green-50 border-green-200"
 						}`}
 					>
-						<div className="flex items-center space-x-3 mb-2">
-							<div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-							<span className="font-medium text-green-500">
+						<div className='flex items-center space-x-3 mb-2'>
+							<div className='w-3 h-3 bg-green-500 rounded-full animate-pulse' />
+							<span className='font-medium text-green-500'>
 								Available for work
 							</span>
 						</div>
@@ -317,10 +302,10 @@ const ContactSection = () => {
 
 				{/* Bottom CTA */}
 				<motion.div
-					initial="hidden"
+					initial='hidden'
 					animate={isInView ? "visible" : "hidden"}
 					variants={containerVariants}
-					className="text-center mt-20"
+					className='text-center mt-20'
 				>
 					<motion.div
 						variants={itemVariants}
@@ -330,7 +315,7 @@ const ContactSection = () => {
 								: "bg-gray-50/50 border-gray-200"
 						}`}
 					>
-						<h3 className="text-xl font-medium mb-4">Prefer a quick call?</h3>
+						<h3 className='text-xl font-medium mb-4'>Prefer a quick call?</h3>
 						<p
 							className={`${
 								isDarkMode ? "text-gray-400" : "text-gray-600"

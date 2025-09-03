@@ -260,7 +260,7 @@ export const CONTACT_INFO = [
 	{
 		icon: Mail,
 		label: "Email",
-		value: "charrodterrell@yahoo.com",
+		value: "CodeElephas@gmail.com",
 	},
 	{
 		icon: Phone,
