@@ -238,7 +238,7 @@ export const SOCIAL_LINKS = [
 	{
 		name: "Email",
 		icon: Mail,
-		url: "Mailto:charrodterrell@yahoo.com",
+		url: "Mailto:CodeElephas@gmail.com",
 		color: "hover:text-green-400",
 		bgColor: "hover:bg-green-500/10",
 	},

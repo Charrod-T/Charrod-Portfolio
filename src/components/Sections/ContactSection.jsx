@@ -36,7 +36,42 @@ const ContactSection = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setIsSubmitting(true);
+// Replace "YOUR_API_ENDPOINT" with your actual form submission API endpoint.
+        // Replace "YOUR_PUBLIC_API_KEY" with your actual public API key.
+        // The method for including the API key depends on the specific API you are using.
+        // This example includes the API key in the request body.
+        //try {
+            //const response = await fetch("YOUR_API_ENDPOINT", {
+                //method: "POST", // Or the appropriate HTTP method for your API
+               //headers: {
+                    //"Content-Type": "application/json",
+                    // If the API key is needed in headers (less common for public keys directly from client)
+                    // "X-API-Key": "YOUR_PUBLIC_API_KEY"
+                //},
+                //body: JSON.stringify({
+                    //...formData,
+                    //apiKey: "YOUR_PUBLIC_API_KEY", // Include API key in the //body
+                //}),
+            //});
 
+            //if (response.ok) {
+                // Handle successful submission
+                //setShowSuccess(true);
+                //setFormData({ name: "", email: "", message: "" });
+                // Hide success message after 3 seconds
+                //setTimeout(() => setShowSuccess(false), 3000); // Corrected hide logic
+            //} else {
+                // Handle API errors
+                //console.error("Form submission failed:", response.statusText);
+                // Optionally, show an error message to the user
+            //}
+        //} catch (error) {
+            //console.error("Error during form submission:", error);
+            // Optionally, show an error message to the user
+        //} finally {
+            //setIsSubmitting(false);
+        //}
+    //};
 		// Simulate form submission
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		setIsSubmitting(false);
