@@ -98,13 +98,13 @@ export const PROJECTS = [
 		id: 1,
 		title: "Responsive Website",
 		description:
-			"A Responsive multi-page website with modern design, smooth animations, and API integration",
+			"A modern, fully responsive landing page built to present an AI-focused brand with clean design and smooth usability across all screen sizes.",
 		image: PROJECT_IMG_1,
-		tags: ["React", "Tailwind"],
+		tags: ["React", "Tailwind", "JavaScript"],
 		liveUrl: "https://charrod-t.github.io/radian-ai/",
 		githubUrl: "https://github.com/Charrod-T/radian-ai",
 		featured: false,
-		category: "Web App",
+		category: "Web Design",
 	},
 	{
 		id: 2,
