@@ -30,7 +30,14 @@ const Navbar = () => {
 					className="flex items-center space-x-2"
 				>
 					<Terminal size={24} className="text-blue-500" />{" "}
-					<span className="text-lg ml-1">Charrod Terrell</span>
+					<span className={`text-lg ml-1 transition-colors ${
+								isDarkMode
+									? "text-gray-400 hover:text-white"
+									: "text-gray-600 hover:text-gray-900"
+							}`}>
+								Charrod Terrell
+							</span>
+				
 				</motion.div>
 
 				{/*Desktop Navigation*/}
