@@ -1,18 +1,45 @@
-# React + Vite
+# Charrod Terrell Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio! This repository showcases my work as a software engineer, highlighting projects across **front-end, back-end, and full-stack development**. Each project demonstrates my ability to solve problems, write clean and maintainable code, and leverage modern technologies.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About Me
 
-## React Compiler
+I am a passionate software engineer focused on creating **efficient, scalable, and user-friendly applications**. I enjoy working on projects that challenge my skills and allow me to explore new technologies and frameworks.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Skills:** JavaScript, HTML, CSS, React, Node.js, Express, MongoDB, SQL, REST APIs, Git/GitHub
+- **Focus Areas:** Front-end development, Back-end development, Full-stack projects
+- **Certifications:** FreeCodeCamp, CompTIA Security+, A+
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Portfolio Projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Here are some of the projects featured in this portfolio:
+
+### Front-End Projects
+- **Project Name** – Brief description (Tech used)
+- **Project Name** – Brief description (Tech used)
+
+### Back-End Projects
+- **Project Name** – Brief description (Tech used)
+- **Project Name** – Brief description (Tech used)
+
+### Full-Stack Projects
+- **Project Name** – Brief description (Tech used)
+- **Project Name** – Brief description (Tech used)
+
+> Each project includes live demos and source code. Feel free to explore and reach out if you have questions or opportunities for collaboration!
+
+---
+
+## Contact
+
+- **Email:** your.email@example.com  
+- **GitHub:** [https://github.com/yourusername](https://github.com/yourusername)  
+- **Portfolio:** [https://yourportfolio.com](https://yourportfolio.com)  
+
+---
+
+Thank you for visiting! I’m always open to connecting with fellow developers, collaborators, or potential employers.

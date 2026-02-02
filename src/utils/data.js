@@ -19,7 +19,7 @@ import {
 
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 //import create projects thumbnails for all as preview png images
-
+import PROJECT_IMG_1 from "../assets/images/project-1.png";
 export const SKILLS_CATEGORY = [
 	{
 		title: "Frontend",
@@ -88,7 +88,7 @@ export const TECH_STACK = [
 
 export const STATS = [
 	{ number: "7", label: "Projects Completed" },
-	{ number: "3+", label: "Years Experience" },
+	{ number: "1", label: "Years Experience" },
 	{ number: "15+", label: "Technologies" },
 	{ number: "100%", label: "Client Satisfaction" },
 ];
@@ -99,10 +99,10 @@ export const PROJECTS = [
 		title: "Responsive Website",
 		description:
 			"A Responsive multi-page website with modern design, smooth animations, and API integration",
-		image: "#",
+		image: PROJECT_IMG_1,
 		tags: ["React", "Tailwind"],
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://charrod-t.github.io/radian-ai/",
+		githubUrl: "https://github.com/Charrod-T/radian-ai",
 		featured: false,
 		category: "Web App",
 	},
