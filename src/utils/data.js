@@ -20,6 +20,9 @@ import {
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 //import create projects thumbnails for all as preview png images
 import PROJECT_IMG_1 from "../assets/images/project-1.png";
+import PROJECT_IMG_2 from "../assets/images/project-2.png";
+
+
 export const SKILLS_CATEGORY = [
 	{
 		title: "Frontend",
@@ -98,25 +101,25 @@ export const PROJECTS = [
 		id: 1,
 		title: "Responsive Website",
 		description:
-			"A modern, fully responsive landing page built to present an AI-focused brand with clean design and smooth usability across all screen sizes.",
+			"A responsive website built with HTML, CSS, and JavaScript to showcase a portfolio of projects with a clean and modern design.",
 		image: PROJECT_IMG_1,
-		tags: ["React", "Tailwind", "JavaScript"],
-		liveUrl: "https://charrod-t.github.io/ai-radian/",
-		githubUrl: "https://github.com/Charrod-T/ai-radian",
+		tags: ["html", "css", "Javascript"],
+		liveUrl: "https://charrod-t.github.io/Project-Photo/",
+		githubUrl: "https://github.com/Charrod-T/Project-Photo",
 		featured: false,
 		category: "Web Design",
 	},
 	{
 		id: 2,
-		title: "E-Commerce platform",
+		title: "Responsive Website",
 		description:
-			"A full-stack e-commerce solution with advanced filtering, payment intergration and real-time inventory",
-		image: "#",
+			"A modern, fully responsive landing page built to present an AI-focused brand with clean design and smooth usability across all screen sizes.",
+		image: PROJECT_IMG_2,
 		tags: ["React", "Tailwind", "Framer motion"],
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://charrod-t.github.io/ai-radian/",
+		githubUrl: "https://github.com/Charrod-T/ai-radian",
 		featured: false,
-		category: "Full Stack",
+		category: "Web Design",
 	},
 	{
 		id: 3,
