@@ -70,7 +70,7 @@ const ProjectCard = ({ project, index, isDarkMode }) => {
 							href={project.liveUrl}
 							initial={{ y: 20, opacity: 0.5 }}
 							whileHover={{ y: 0, opacity: 1, scale: 1.05 }}
-							transition={{ duration: 0.3, delay: 0.1 }}
+							transition={{ duration: 0.3 }}
 							className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium transition-colors"
 						>
 							<ExternalLink size={16} />
@@ -80,7 +80,7 @@ const ProjectCard = ({ project, index, isDarkMode }) => {
 							href={project.githubUrl}
 							initial={{ y: 20, opacity: 0.5 }}
 							whileHover={{ y: 0, opacity: 1, scale: 1.05 }}
-							transition={{ duration: 0.3, delay: 0.2 }}
+							transition={{ duration: 0.3 }}
 							className={`border-2 border-white text-white hover:bg-white hover:text-gray-900 px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium transition-all`}
 						>
 							<FiGithub size={16} />
