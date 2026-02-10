@@ -99,7 +99,7 @@ export const STATS = [
 export const PROJECTS = [
 	{
 		id: 1,
-		title: "Responsive Website",
+		title: "Responsive Webpage",
 		description:
 			"A responsive website built with HTML, CSS, and JavaScript to showcase a portfolio of projects with a clean and modern design.",
 		image: PROJECT_IMG_1,
@@ -111,7 +111,7 @@ export const PROJECTS = [
 	},
 	{
 		id: 2,
-		title: "Responsive Website",
+		title: "Responsive Webpage",
 		description:
 			"A modern, fully responsive landing page built to present an AI-focused brand with clean design and smooth usability across all screen sizes.",
 		image: PROJECT_IMG_2,
@@ -123,15 +123,15 @@ export const PROJECTS = [
 	},
 	{
 		id: 3,
-		title: "Blog App with AI post Generator",
+		title: "Responsive Webpage",
 		description:
-			"A full-stack blog app using the MERN stack - with full Markdown support, tag filtering, and an intergrated AI",
-		image: "#",
-		tags: ["React", "Node.js", "MongoDB", "Tailwind"],
-		liveUrl: "#",
-		githubUrl: "#",
+			"A sleek, responsive catering webpage showcasing services, menus, events, and contact info, with elegant visuals, seamless navigation, and mobile-friendly design for every device.",
+		image: PROJECT_IMG_3,
+		tags: ["React", "JavaScript", "Tailwind"],
+		liveUrl: "https://charrod-t.github.io/Cater/",
+		githubUrl: "https://github.com/Charrod-T/Cater",
 		featured: false,
-		category: "Full Stack",
+		category: "Web Design",
 	},
 	{
 		id: 4,
