@@ -21,7 +21,7 @@ import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 //import create projects thumbnails for all as preview png images
 import PROJECT_IMG_1 from "../assets/images/project-1.png";
 import PROJECT_IMG_2 from "../assets/images/project-2.png";
-
+import PROJECT_IMG_3 from "../assets/images/project-3.png";
 
 export const SKILLS_CATEGORY = [
 	{
